@@ -1,0 +1,263 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Product Passport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        .header h1 {
+            font-weight: normal;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+        .product-info {
+            display: flex;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .product-image {
+            flex: 0 0 200px;
+            margin-right: 20px;
+        }
+        .product-image img {
+            max-width: 100%;
+        }
+        .product-details {
+            flex: 1;
+        }
+        .product-details h2 {
+            margin-top: 0;
+        }
+        .product-description {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #006633;
+        }
+        .two-columns {
+            display: flex;
+            border-top: 1px dashed #ccc;
+            border-bottom: 1px dashed #ccc;
+        }
+        .left-column {
+            flex: 1;
+            padding: 20px;
+        }
+        .right-column {
+            flex: 2;
+            padding: 20px;
+            position: relative;
+        }
+        .map-container {
+            position: relative;
+            height: 250px;
+        }
+        .map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .journey-point {
+            position: absolute;
+            font-size: 14px;
+        }
+        .certifications {
+            padding: 20px;
+            text-align: center;
+        }
+        .certifications h3 {
+            margin-bottom: 20px;
+        }
+        .cert-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .cert-item {
+            flex: 0 0 30%;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cert-image {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .cert-description {
+            font-size: 12px;
+            text-align: center;
+            max-width: 200px;
+        }
+        .action-button {
+            display: block;
+            background-color: #005a87;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        li::before {
+            content: "• ";
+            color: #006633;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>D i g i t a l - P r o d u c t - P a s s p o r t</h1>
+        <br/>
+        </div>
+        <br />
+
+        <div class="product-info">
+            <div class="product-image">
+                <img src="~/image/8848-altitude-womens-audrey-ski-jacket-skidjacka.jpg" alt="Skidjacka Audrey 2460" />
+			</div>
+            <div class="product-details">
+                <h2>Skidjacka (Audrey) 2460</h2>
+                <div class="product-description">
+                    <p>En skidjacka som möter de högsta kraven på komfort, väderskydd och design. Huvudmaterialet <span class="highlight">durAtec® Supreme</span> har följsam 4-vägsstretch. Alla sömmar är tejpade. Panelerna binder på båda sidor vilket ger gjorda med sömlös teknik. Vadderingen i panelerna är <span class="highlight">ThermoHeat EcoHode T-DOWN</span> av återvunnet material, som ger utmärkt värme, mjukhet och lätthet likt äkta dun. Övrig vaddering i jackan är en 120 grams polyester.</p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+
+        <div class="two-columns">
+            <div class="left-column">
+                <h3>EU DPP karta:</h3>
+                <ul>
+                    <li>Foder: 100% Polyester</li>
+                    <li>Funktion: Varmfodrat</li>
+                    <li>Kvalitet: Vävd</li>
+                    <li>Material: 88% Polyamid,   12% Elastan</li>
+                    <li>Tvättråd: Maskintvätt 30°</li>
+                </ul>
+            </div>
+            <div class="right-column">
+                <iframe width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/MDgLOohSQBI"
+                        title="Product Journey"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="product-info">
+			<div class="product-image">
+				<img src="~/image/recycle001.svg" />
+            </div>
+            <div class="product-details">
+                <h2>Återvinnings guide</h2>
+                <div class="product-description">
+                <p>
+                    Plocka isär jackan:
+                    <ol>
+                        <li>Ta bort dragkedjor, knappar, snörstopp och andra hårda delar. Klipp loss foder, vaddering och olika paneler. Dela upp materialen efter typ. </li>
+                    
+
+                    
+                        <li> Polyesterdelar (foder, vaddering, kviltade paneler): Går att återvinna i textilinsamlingar </li>
+
+
+                        <li>
+                            Nylon/elastan-blandning (släta paneler): Svårare att återvinna, men kan lämnas till textilåtervinning
+                        </li>
+
+                        <li>
+                            Metall/plastdetaljer: Sortera som metallskrot eller plast om möjligt
+                        </li>
+
+                        <li>
+                            Fleece och stretchdetaljer: Lämna med annan polyester om de inte är alltför blandade
+                        </li>
+                    </ol>
+
+                    Alternativ till återvinning:
+
+                    <ol>
+                        <li>
+                            Laga jackan om den går att använda längre
+                        </li>
+
+                        <li>
+                            Skänk bort om den är i bra skick
+                        </li>
+
+                        <li>
+                            Återanvänd delar (t.ex. dragkedjor eller tyg) till andra projekt
+                        </li>
+                    </ol>
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="certifications">
+            <h3>8848's certifieringar om hållbarhet:</h3>
+            <div class="cert-container">
+                <div class="cert-item">
+					<img src="~/image/nedladdning (1).png" />
+                    <div class="cert-description">
+                        Oeko-Tex® är ett globalt enhetligt och oberoende test- och certifieringssystem som säkerställer produktkvalitet och minimerar farliga ämnen i textilindustrin.
+                    </div>
+                </div>
+                <div class="cert-item">
+					<div class="cert-description">
+						<img src="~/image/blue.png" />
+                        Bluesign® Approved är ett oberoende global standard för hållbara material.
+                    </div>
+                </div>
+				<div class="cert-item">
+					<img src="~/image/nedladdning (3).png" />
+                    <div class="cert-description">
+                        Kemikaliegruppen är ett förbund som hjälper sina medlemmar om de senaste uppdateringarna om kemikalier och miljöfrågor.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
